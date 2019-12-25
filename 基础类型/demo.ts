@@ -52,6 +52,17 @@
     //object
     let object1: object = {}
     function create(val: object | null) { }
+
+    //联合类型
+    let number: string | number = "1"
+    number = 1
+
+    //类型断言
+    let someValue: any = 'some value'
+    let valueLength: number = (<string>someValue).length
+    let valueLength2: number = (someValue as string).length
+
+    
 })()
 
 
