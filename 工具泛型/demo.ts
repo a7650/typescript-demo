@@ -7,7 +7,7 @@ const foo1 = {
   name: 'zzp',
   age: 22
 }
-
+const a = Object.assign
 type T = keyof Foo
 type P = {
   [p in keyof Foo]: string
@@ -16,7 +16,7 @@ type P = {
 type MPartial<T> = {
   [p in keyof T]?: T[p]
 }
-type FooPartial = MPartial<typeof foo1>
+type FooPartial = Partial<typeof foo1>
 
 type MRequired<T> = {
   [p in keyof T]-?: T[p]
