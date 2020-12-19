@@ -27,3 +27,12 @@ type Connect<M, F = PickFunction<M>> = {
 }
 
 type Res = Connect<Module>
+
+//////////////
+
+interface Person {
+  name: string
+  age: number
+  location: string
+}
+type K3 = keyof { [x: string]: Person }
